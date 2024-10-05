@@ -1,0 +1,16 @@
+--- # Loos playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: add a list of users
+      user: name='{{item}}' state=present
+      with_items:
+        - Bhupindar
+        - Malli
+        - Dranzer
+        - Tate
+        - Tristan
+...

@@ -1,0 +1,11 @@
+--- # Condition playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Install httpd on Linux 
+      action: yum name=httpd state=installed
+      when: ansible_os_family == "RedHat"
+...

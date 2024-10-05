@@ -1,0 +1,13 @@
+--- # Task file
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: install httpd on Linux
+      action: yum name=httpd state=installed
+ 
+    - name: install git on Linux
+      action: yum name=git state=installed
+...  

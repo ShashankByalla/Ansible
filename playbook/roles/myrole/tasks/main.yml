@@ -1,0 +1,4 @@
+--- # Task playbook
+- name: Install httpd on Linux
+  action: yum name=httpd state=installed
+...

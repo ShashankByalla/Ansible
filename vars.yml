@@ -1,0 +1,11 @@
+--- # Vars playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+      pkgname: tree
+  tasks:
+    - name: Install tree on Linux
+      action: yum name='{{pkgname}}' state=installed
+...
